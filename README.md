@@ -1,5 +1,6 @@
 # Simple NFT Marketplace
 
+> 日本語の解説ブログは[こちら](https://aws-samples.github.io/jp-prototyping-blog/blog/simple-nft-marketplace/)
 
 This project provides sample code to build a simple NFT
 ([Non-Fungible Token](https://aws.amazon.com/blockchain/nfts-explained/))
@@ -28,5 +29,20 @@ You will use the following tool set:
 - Marketplace web UI ([/marketplace](/marketplace))
 
 Do NOT use this codes in your production workloads.
+
+## Architecture
+
+![Architecture](/imgs/simple-nft-marketplace.png)
+
+## Docs
+
+- [Documentation (English)](/docs/en)
+- [ドキュメント (日本語)](/docs/ja)
+
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
+## License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
