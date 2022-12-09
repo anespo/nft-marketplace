@@ -164,7 +164,7 @@ const deployAmbNode = async () => {
     },
   });
   await commandWithPipe(
-    `cdk deploy SimpleNftMarketplaceBlockchainNode \
+    `cdk deploy TonyNftMarketplaceBlockchainNode \
   --require-approval never \
   --outputs-file ${PATHS.stackOutputs} \
 `,
@@ -178,12 +178,12 @@ const deployAmbNode = async () => {
     }
   );
   await copyStackOutputToSettings(
-    'SimpleNftMarketplaceBlockchainNode',
+    'TonyNftMarketplaceBlockchainNode',
     'AmbHttpEndpoint',
     'ambEndpoint'
   );
   await copyStackOutputToSettings(
-    'SimpleNftMarketplaceBlockchainNode',
+    'TonyNftMarketplaceBlockchainNode',
     'DeployRegion',
     'region'
   );
@@ -195,7 +195,7 @@ const deployApi = async () => {
   const contractAddress = await getFromSettings('contractAddress');
   const endpoint = await getFromSettings('ambEndpoint');
   await commandWithPipe(
-    `cdk deploy SimpleNftMarketplaceStack \
+    `cdk deploy TonyNftMarketplaceStack \
   --require-approval never \
   --outputs-file ${PATHS.stackOutputs}`,
     {
@@ -207,17 +207,17 @@ const deployApi = async () => {
     }
   );
   await copyStackOutputToSettings(
-    'SimpleNftMarketplaceStack',
+    'TonyNftMarketplaceStack',
     'UserPoolId',
     'userPoolId'
   );
   await copyStackOutputToSettings(
-    'SimpleNftMarketplaceStack',
+    'TonyNftMarketplaceStack',
     'UserPoolClientId',
     'userPoolClientId'
   );
   await copyStackOutputToSettings(
-    'SimpleNftMarketplaceStack',
+    'TonyNftMarketplaceStack',
     'NftApiEndpoint',
     'nftApiEndpoint'
   );
@@ -304,7 +304,7 @@ const buildFrontEnd = async () => {
 const deployFrontEnd = async () => {
   logProgress('Deploy UI');
   const deploy = commandWithPipe(
-    `cdk deploy SimpleNftMarketplaceFrontendStack \
+    `cdk deploy TonyNftMarketplaceFrontendStack \
     --require-approval never`,
     {
       cwd: PATHS.provision,
@@ -363,7 +363,7 @@ run()
       chalk.green(`
 Success!
 
-Your Simple NFT Marketplace has now been deployed and the UI can be accessed at
+Tony NFT Marketplace has now been deployed and the UI can be accessed at
 the following URL:
 
 ${await getFromSettings('cfnEndpoint')}
