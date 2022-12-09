@@ -371,7 +371,7 @@ ${await getFromSettings('cfnEndpoint')}
 To mint and send your first NFT, you can start by creating an account on the UI
 as listed in the docs starting from here:
 
-https://github.com/aws-samples/simple-nft-marketplace/blob/main/docs/en/DOCS_04_FRONTEND.md#create-an-account
+https://github.com/anespo/nft-marketplace/blob/main/nft-creation
     `)
     );
     process.exit();
