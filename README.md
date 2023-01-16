@@ -1,6 +1,6 @@
-# Simple NFT Marketplace
+# NFT Marketplace
 
-This project provides sample code to build a simple NFT
+This project provides code to build a simple NFT
 ([Non-Fungible Token](https://aws.amazon.com/blockchain/nfts-explained/))
 based marketplace with Amazon Managed Blockchain.
 
